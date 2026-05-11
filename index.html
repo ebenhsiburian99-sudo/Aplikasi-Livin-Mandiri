@@ -1,2 +1,203 @@
-# Aplikasi-Livin-Mandiri
-Aplikasi Livin Mandiri
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup Livin App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f8f9fa; display: flex; justify-content: center; }
+        
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            background: white;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        /* Header Blue Splash */
+        .header-bg {
+            background: linear-gradient(135deg, #0056b3 0%, #00aaff 100%);
+            height: 120px;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+        }
+
+        /* Greeting Section */
+        .greeting {
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .greeting span { color: #0056b3; font-weight: bold; }
+
+        /* Quick Actions (Horizontal Scroll) */
+        .quick-actions {
+            display: flex;
+            gap: 15px;
+            padding: 0 20px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .card {
+            min-width: 160px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        .card-label { font-size: 12px; color: #00aaff; font-weight: bold; margin-bottom: 5px; }
+        .card-title { font-size: 14px; font-weight: bold; }
+
+        /* Grid Menu */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .menu-item { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 12px; }
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Warna Ikon */
+        .bg-teal { background-color: #26a69a; }
+        .bg-blue { background-color: #42a5f5; }
+        .bg-yellow { background-color: #d4e157; }
+        .bg-orange { background-color: #ffa726; }
+        .bg-purple { background-color: #ba68c8; }
+        .bg-pink { background-color: #ef5350; }
+
+        /* Savings Section */
+        .section-title {
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: #0056b3;
+            margin-top: 10px;
+        }
+        .account-card {
+            margin: 15px 20px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            border-left: 5px solid #ffca28;
+        }
+
+        /* Bottom Navbar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 480px;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+        }
+        .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 10px; color: #888; }
+        .nav-item.active { color: #0056b3; }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="header-bg">livin'</div>
+
+    <div class="greeting">Selamat Pagi, <span>Livia!</span></div>
+
+    <div class="quick-actions">
+        <div class="card">
+            <div class="card-label">BAYAR</div>
+            <div class="card-title">PLN Rumahku</div>
+        </div>
+        <div class="card">
+            <div class="card-label">TRANSFER</div>
+            <div class="card-title">Andika Ramadan</div>
+        </div>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <div class="icon-circle bg-teal"><i class="fas fa-arrow-right"></i></div>
+            Transfer
+        </div>
+        <div class="menu-item">
+            <div class="icon-circle bg-blue"><i class="fas fa-file-invoice"></i></div>
+            Bayar
+        </div>
+        <div class="menu-item">
+            <div class="icon-circle bg-yellow"><i class="fas fa-wallet"></i></div>
+            Top-up
+        </div>
+        <div class="menu-item">
+            <div class="icon-circle bg-orange"><i class="fas fa-stop-circle"></i></div>
+            e-money
+        </div>
+        <div class="menu-item">
+            <div class="icon-circle bg-purple"><i class="fas fa-trash-alt"></i></div>
+            Tarik Tunai
+        </div>
+        <div class="menu-item">
+            <div class="icon-circle bg-blue"><i class="fas fa-qrcode"></i></div>
+            QR Bayar
+        </div>
+        <div class="menu-item">
+            <div class="icon-circle bg-teal"><i class="fas fa-chart-line"></i></div>
+            Investasi
+        </div>
+        <div class="menu-item">
+            <div class="icon-circle bg-pink"><i class="fas fa-shopping-bag"></i></div>
+            Sukha
+        </div>
+    </div>
+
+    <div class="section-title">
+        <span>Tabungan & Deposito</span>
+        <span style="font-size: 12px; color: #888;"><i class="fas fa-eye"></i> Saldo</span>
+    </div>
+
+    <div class="account-card">
+        <div>
+            <div style="font-weight: bold;">Mandiri Tabungan NOW</div>
+            <div style="font-size: 12px; color: #888;">0120012345091</div>
+        </div>
+        <i class="fas fa-chevron-right" style="color: #ccc;"></i>
+    </div>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active"><i class="fas fa-home"></i> Beranda</div>
+        <div class="nav-item"><i class="fas fa-percentage"></i> Promo</div>
+        <div class="nav-item"><i class="fas fa-envelope"></i> Pesan</div>
+        <div class="nav-item"><i class="fas fa-cog"></i> Pengaturan</div>
+        <div class="nav-item"><i class="fas fa-sign-out-alt"></i> Log Out</div>
+    </nav>
+</div>
+
+</body>
+</html>
